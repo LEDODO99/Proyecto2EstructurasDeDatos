@@ -1,4 +1,6 @@
-#Mario Sarmientos 17055 }
+#Mario Sarmientos 17055
+#Sergio Marchena 16387 
+#Mario Sarmientos  
 
 from neo4j.v1 import GraphDatabase, basic_auth
 
