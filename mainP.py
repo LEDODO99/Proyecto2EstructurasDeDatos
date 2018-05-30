@@ -16,7 +16,8 @@ while (cond == False):
     print("3. Buscar por estado de animo")
     print("4. Buscar por artista")
     print("5. Buscar cancion especifica")
-    print("6. Salir")
+    print("6. Borrar una cancion de la base")
+    print("7. Salir")
     opc = (input("elija que desea hacer: "))
 
 #ingresar nueva cancion
@@ -62,8 +63,12 @@ while (cond == False):
         #recomendacion de canciones por estado    
         if recomendacion == 3:
             encontrarEstado(str(ExtraerEstado(song)))
-
-
+#Elimina una cancion de un titulo
+    if opc == "6":
+        song=input("Ingresa la cancion a borrar ")
+        song=str(song)
+        borrarCancion(song)
+        
     respuesta = input("Desea seguir? S/N ")
     while (respuesta != "S" and respuesta != "N"):
         print ("Por favor ingrese uno de los siguientes(S o N)")

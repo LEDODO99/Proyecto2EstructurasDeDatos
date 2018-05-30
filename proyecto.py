@@ -90,7 +90,15 @@ def ExtraerArtista(song):
                           "RETURN song.artista AS artista",{"name":song})
     for info in cancion:
         genere = info["artista"]
-    return genere 
+    return genere
+
+#Elimina una cancion de la base
+def borrarCancion(song):
+    cancion = session.run("MATCH (song:Cancion) WHERE song.nombre = {name}"
+                          "RETURN song.nombre AS nombre, song.artista As artista",{"name":song})
+    print("Se ha eliminado:")
+    for dato in cancion:
+        print("Nombre: "+dato["nombre"]+" Artista " + dato["artista"] + "\n")
 
 #funcion para terminar conexion con bd
 def Salir():
