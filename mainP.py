@@ -22,24 +22,24 @@ while (cond == False):
         nombre = input("nombre de la cancion:")
         artista = input("nombre del artista: ")
         genero  = input("genero musical: ")
-        estado = input("estado de animo")
+        estado = input("estado de animo: ")
         nuevaCancion(nombre,artista,genero,estado)
         
     if opc == "2":
-        genero = input("De que genero desea encontrar canciones ")
+        genero = input("De que genero desea encontrar canciones :")
         genero = str(genero)
         encontrarGenero(genero)
         
     if opc == "3":
-        state = input("de que estado de animo te sientes? ")
+        state = input("De que estado de animo te sientes? :")
         state = str(state)
         encontrarEstado(state)
     if opc == "4":
-        artist = input("De que artista desea escuchar musica? ")
+        artist = input("De que artista desea escuchar musica? :")
         artist = str(artist)
         encontrarArtista(artist)
     if opc == "5":
-        song = input("Que cancion te gustaria escuchar? ")
+        song = input("Que cancion te gustaria escuchar? :")
         song = str(song)
         encontrarCancion(song)
         recomendacion = randint(1, 3)
