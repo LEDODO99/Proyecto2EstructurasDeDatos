@@ -1,4 +1,6 @@
 #Mario Sarmientos 17055
+#Sergio Marchena 16387
+#Luis Delgado 
 
 
 from proyecto import *
@@ -17,7 +19,7 @@ while (cond == False):
     print("6. Salir")
     opc = (input("elija que desea hacer: "))
 
-#acciones a ejecutar de acorde al usario
+#ingresar nueva cancion
     if opc == "1":
         nombre = input("nombre de la cancion:")
         artista = input("nombre del artista: ")
@@ -25,19 +27,25 @@ while (cond == False):
         estado = input("estado de animo: ")
         nuevaCancion(nombre,artista,genero,estado)
         
+#buscar recomendacion por genero
     if opc == "2":
         genero = input("De que genero desea encontrar canciones :")
         genero = str(genero)
         encontrarGenero(genero)
         
+#buscar recomendacion por tag (estado de animo)         
     if opc == "3":
         state = input("De que estado de animo te sientes? :")
         state = str(state)
         encontrarEstado(state)
+        
+#buscar recomendacion por artista        
     if opc == "4":
         artist = input("De que artista desea escuchar musica? :")
         artist = str(artist)
         encontrarArtista(artist)
+        
+#buscar recomendacion por nombre especifico
     if opc == "5":
         song = input("Que cancion te gustaria escuchar? :")
         song = str(song)
@@ -50,11 +58,9 @@ while (cond == False):
             encontrarGenero(str(ExtraerGenero(song)))
         #recomendacion de canciones por artista
         if recomendacion == 2:
-            
             encontrarArtista(str(ExtraerArtista(song)))
         #recomendacion de canciones por estado    
         if recomendacion == 3:
-            
             encontrarEstado(str(ExtraerEstado(song)))
 
 
